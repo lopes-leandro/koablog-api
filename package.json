@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "watch": "npx nodemon index.js",
+    "dev": "PORT=1234 npx nodemon index.js"
   },
   "keywords": [],
   "author": "",
@@ -20,5 +22,8 @@
     "koa-views": "^6.3.0",
     "mongoose": "^5.10.5",
     "mongoose-unique-validator": "^2.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }
