@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+mongoose.set('useCreateIndex', true);
 
 module.exports = () => {
   mongoose.connect('mongodb://localhost:27017/koa-blog', { useUnifiedTopology: true, useNewUrlParser: true});
