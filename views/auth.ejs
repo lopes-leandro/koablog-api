@@ -1,0 +1,72 @@
+<%- include('partials/header.ejs') -%>
+<div class="columns">
+  <div class="column">
+    <h1 class="title">Registro</h1>
+    <form action="/auth/register" method="post">
+      <div class="field">
+        <label for="fullName" class="label">Nome Completo</label>
+        <div class="control">
+          <input
+            type="text"
+            class="input"
+            placeholder="ex. Leandro Lopes"
+            name="fullName"
+          />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="emal" class="label">Email</label>
+        <div class="control">
+          <input
+            type="email"
+            class="input"
+            placeholder="ex. lopesleandro.it@gmail.com"
+            name="email"
+          />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="password" class="label">Password</label>
+        <div class="control">
+          <input type="password" class="input" name="password" />
+        </div>
+      </div>
+
+      <div class="control">
+        <button class="button is-primary">Enviar</button>
+      </div>
+    </form>
+  </div>
+  <div class="column">
+    <h1 class="title">Login</h1>
+    <form action="/auth/login" method="post">
+      
+      <div class="field">
+        <label for="emal" class="label">Email</label>
+        <div class="control">
+          <input
+            type="email"
+            class="input"
+            placeholder="ex. lopesleandro.it@gmail.com"
+            name="email"
+          />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="password" class="label">Password</label>
+        <div class="control">
+          <input type="password" class="input" name="password" />
+        </div>
+      </div>
+
+      <div class="control">
+        <button class="button is-primary">Enviar</button>
+      </div>
+      
+    </form>
+  </div>
+</div>
+<%- include('partials/footer.ejs') -%>
