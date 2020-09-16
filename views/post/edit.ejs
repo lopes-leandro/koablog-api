@@ -1,0 +1,40 @@
+<%- include('../partials/header.ejs') -%>
+<div class="columns">
+  <div class="column is-three-quarters">
+    <h1 class="title"><%= title%></h1>
+    <form action="/post/<%= post.id%>" method="POST">
+      <input type="hidden" name="method" value="PUT" />
+      <div class="field">
+        <label for="title" class="label">Title</label>
+        <div class="control">
+          <input
+            type="text"
+            class="input"
+            value="<%= post.title%>"
+            placeholder="ex. Koa é facil"
+            name="title"
+          />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="content" class="label">Conteúdo</label>
+        <div class="control">
+          <textarea
+            rows="12"
+            class="textarea"
+            placeholder="ex. Olá Mundo do Koa"
+            name="content"
+          ><%= post.content %></textarea
+          >
+        </div>
+      </div>
+
+      <div class="control">
+        <a href="/post/<%= post.id%>/show" class="button  is-text">Cancelar</a>
+        <button class="button is-primary">Enviar</button>
+      </div>
+    </form>
+  </div>
+</div>
+<%- include('../partials/footer.ejs') -%>

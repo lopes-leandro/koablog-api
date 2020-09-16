@@ -1,13 +1,18 @@
 const KoaRouter = require('koa-router');
-const router = new KoaRouter();
-const authController = require('../controllers/authController');
 const authenticated = require('./authenticated');
 const guest = require('./guest');
 const user = require('./user');
+const authController = require('../controllers/authController');
+const postController = require('../controllers/postController');
 
+const router = new KoaRouter();
 router.use(user());
 
-router.get('/', ctx => ctx.render('index', {title: 'Bem-vindo'}));
+// base routes
+// autenticação não é requirida
+router
+  .get('/', postController.index)
+  .get('/post/:id/show', postController.show);
 
 // rotas auth
 const auth = new KoaRouter()
@@ -15,8 +20,16 @@ const auth = new KoaRouter()
   .post('/login', authController.login)
   .post('/register', authController.register)
   .get('/logout', authController.logout);
-
-// sub-rotas em nossas rotas principais
 router.use('/auth', auth.routes());
+
+// rotas do post
+const posts = new KoaRouter();
+posts
+  .use(authenticated())
+  .post('/', postController.store)
+  .get('/create', postController.create)
+  .put('/:id', postController.update)
+  .get('/:id/edit', postController.edit); 
+router.use('/post', posts.routes());
 
 module.exports = router;

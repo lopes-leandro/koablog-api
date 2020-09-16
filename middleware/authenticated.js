@@ -1,10 +1,10 @@
 module.exports = () => {
   return async (ctx, next) => {
-    const {user} = ctx.sesstion;
-    if(user) {
+    const { user } = ctx.session;
+    if (user) {
       await next();
     } else {
-      ctx.redirect('/auth');
+      ctx.redirect("/auth");
     }
-  }
-}
+  };
+};
