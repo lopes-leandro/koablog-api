@@ -1,2 +1,60 @@
 <%- include('partials/header.ejs') -%>
+<div class="columns">
+  <div class="column">
+    <span
+      style="
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+      "
+    >
+      <span class="title"><%= title %></span>
+      <% if (locals.user) { %>
+      <a href="/post/create" class="button is-primary is-outlined">Novo Post</a>
+      <% } %>
+    </span>
+  </div>
+</div>
+<div class="columns is-multiline">
+  <% posts.forEach(post => { %>
+  <div class="column is-one-third">
+    <div class="card">
+      <div class="card-image">
+        <figure class="image is-4by3">
+          <img src="http://picsum.photos/300/?random" alt="<%= post.title%>">
+        </figure>
+      </div>
+      <div class="card-content">
+        <div class="media">
+          <div class="media-left">
+            <figure class="image is-48x48">
+              <img src="http://picsum.photos/96/?random" alt="Placeholder image">
+            </figure>
+          </div>
+          <div class="media-content">
+            <p class="title is-4"><%= post.author.fullName %></p>
+            <p class="subtitle is-6"><%= post.author.email %></p>
+          </div>
+        </div>        
+        <div class="content">
+          <h4 class="title is-5"><%= post.title %></h4>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Phasellus nec iaculis mauris.          
+          <br>
+          <a href="#">#css</a> <a href="#">#responsive</a> <a href="#">#koa.js</a> <a href="#">#ejs</a>
+        </div>
+      </div>
+      <footer class="card-footer">
+        <p class="card-footer-item">
+          <span>
+            <a href="/post/<%= post.id %>/show" class="button is-primary is-fullwidth">Ver Post</a>
+          </span>
+        </p>
+      </footer>
+    </div>
+  </div>
+
+  <% }); %>
+</div>
 <%- include('partials/footer.ejs') -%>
