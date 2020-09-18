@@ -1,13 +1,16 @@
-const mongoose = require('mongoose');
-mongoose.set('useCreateIndex', true);
+const mongoose = require("mongoose");
+mongoose.set("useCreateIndex", true);
 
 module.exports = () => {
-  mongoose.connect('mongodb://localhost:27017/koa-blog', { useUnifiedTopology: true, useNewUrlParser: true});
-}
+  mongoose.connect('mongodb://koaSystem:koaSystem@localhost/koa-blog', {
+    useUnifiedTopology: true,
+    useNewUrlParser: true,
+  });
+};
 
 const db = mongoose.connection;
 
-db.on('error', error => {
+db.on("error", (error) => {
   throw new Error(`erro ao conectar-se ao banco de dados: ${error}`);
-})
-db.once('open', () => console.log('conectado ao banco de dados'));
+});
+db.once("open", () => console.log("conectado ao banco de dados"));
