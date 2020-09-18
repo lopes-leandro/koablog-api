@@ -15,13 +15,18 @@ module.exports = {
 
   async store(ctx) {
     const {body} = ctx.request;
-    const postData = {
-      ...body,
-      author: ctx.session.user,
-      image: 'http://picsum.photos/300/?random'
-    };
-    const post = await new Post(postData).save();
-    ctx.redirect(`/post/${post.id}/show`);
+    try {
+      const postData = {
+        ...body,
+        author: ctx.session.user
+      };
+      const post = await new Post(postData).save();
+      ctx.redirect(`/post/${post.id}/show`);        
+    } catch (e) {
+      ctx.state.message = e.message;
+      ctx.state.code = (e.status || 500);
+      await ctx.render('pageNotFound');
+    }
   },
 
   async show(ctx) {

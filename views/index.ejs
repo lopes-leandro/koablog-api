@@ -1,5 +1,5 @@
 <%- include('partials/header.ejs') -%>
-<div class="columns">
+<div class="columns mt-5">
   <div class="column">
     <span
       style="
@@ -22,7 +22,7 @@
     <div class="card">
       <div class="card-image">
         <figure class="image is-4by3">
-          <img src="http://picsum.photos/300/?random" alt="<%= post.title%>">
+          <img src="<%= post.image%>" alt="<%= post.title%>">
         </figure>
       </div>
       <div class="card-content">
@@ -39,8 +39,7 @@
         </div>        
         <div class="content">
           <h4 class="title is-5"><%= post.title %></h4>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Phasellus nec iaculis mauris.          
+          <%= post.content%>       
           <br>
           <a href="#">#css</a> <a href="#">#responsive</a> <a href="#">#koa.js</a> <a href="#">#ejs</a>
         </div>
