@@ -1,5 +1,6 @@
 # koablog-api
 Boilerplate API in KoaJS
+![GitHub repo size](https://img.shields.io/github/repo-size/lopes-leandro/koacontacts-api?style=for-the-badge)
 
 **Monte seu MongoDb em um container do Docker**
 ```
