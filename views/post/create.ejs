@@ -1,7 +1,10 @@
 <%- include('../partials/header.ejs') -%>
-<div class="columns">
-  <div class="column is-three-quarters">
-    <!-- <h1 class="title"><%= title%></h1> -->
+<div class="columns mt-5">
+  <div class="column">
+    <small style="display:flex; flex-direction: row; justify-content: space-between; align-content: center;">
+      <h2 class="title"><%= title%></h2>
+      <a href="/" class="button is-text">Voltar</a>
+    </small>
     <form action="/post/" method="POST">
       <div class="field">
         <label for="title" class="label">Title</label>
@@ -11,6 +14,18 @@
             class="input"
             placeholder="ex. Koa é facil"
             name="title"
+          />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="image" class="label">Url da Imagem *</label>
+        <div class="control">
+          <input
+            type="text"
+            class="input"
+            placeholder="ex. https://i.picsum.photos/id/1025/4951/3301.jpg?hmac=_aGh5AtoOChip_iaMo8ZvvytfEojcgqbCH7dzaz-H8Y"
+            name="image"
           />
         </div>
       </div>

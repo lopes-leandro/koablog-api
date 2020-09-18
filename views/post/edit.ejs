@@ -1,9 +1,10 @@
 <%- include('../partials/header.ejs') -%>
-<div class="columns">
+<div class="columns mt-5">
   <div class="column is-three-quarters">
     <h1 class="title"><%= title%></h1>
     <form action="/post/<%= post.id%>" method="POST">
       <input type="hidden" name="method" value="PUT" />
+
       <div class="field">
         <label for="title" class="label">Title</label>
         <div class="control">
@@ -13,6 +14,19 @@
             value="<%= post.title%>"
             placeholder="ex. Koa é facil"
             name="title"
+          />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="image" class="label">Url da Imagem *</label>
+        <div class="control">
+          <input
+            type="text"
+            class="input"
+            value="<%= post.image%>"
+            placeholder="ex. https://i.picsum.photos/id/1025/4951/3301.jpg?hmac=_aGh5AtoOChip_iaMo8ZvvytfEojcgqbCH7dzaz-H8Y"
+            name="image"
           />
         </div>
       </div>

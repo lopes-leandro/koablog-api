@@ -12,19 +12,19 @@
     defer
     src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
   ></script>
-    <title>Blog do Koa</title>
+    <title>Koa Blog</title>
   </head>
   <body>
     <section class="section">
       <div class="container is-fluid">
         <!--navbar start-->
-        <nav class="navbar" role="navigation" aria-label="main navigation">
+        <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
           <div class="navbar-brand">
             <a class="navbar-item" href="/">
               <img
-                src="http://localhost:1234/assets/logo_size.jpg"
-                width="112"
-                height="28"
+                src="https://user-images.githubusercontent.com/44936493/93589255-f03fd000-f982-11ea-94ca-15329d3895c2.jpg"
+                width="360"
+                height="80"
                 alt="Koa"
               />
             </a>
@@ -61,7 +61,7 @@
               </div>
             </div> -->
 
-            <div class="navbar-end">
+            <div class="navbar-end mr-6 pr-2">
               <% if (locals.user) { %>
                 <p class="navbar-item">
                   Bem-vindo, <%= user.fullName %>
@@ -84,7 +84,6 @@
             </div>
           </div>
         </nav>
-        <hr>
         <!--navbar end-->
         <!-- <div class="columns">
           <div class="column">
