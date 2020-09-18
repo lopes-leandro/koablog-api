@@ -10,7 +10,7 @@ O framework Koa foi criado e é mantido pela equipe do ExpressJS no intuito de s
 Para saber mais sobre o KoaJS, visite o site https://koajs.com/
 
 ## Pré-Requisito
-Antes de clonar o projeto, verifique se você tem o NodoJS instalado em sua máquina e o Docker. O NodeJS irá executar nosso projeto e o Docker irá conter nosso container do MongoDB necessário para que este projeto funcione corretamente. No [Wiki](https://github.com/lopes-leandro/koacontacts-api/wiki), eu explico todos os passos para criar um container MongoDB no Docker, se conectar através do Nosql Client ao MongoDB e a criar os usuários necessários para nossa aplicação.
+Antes de clonar o projeto, verifique se você tem o NodeJS instalado em sua máquina e o Docker. O NodeJS irá executar nosso projeto e o Docker irá conter nosso container do MongoDB necessário para que este projeto funcione corretamente. No [Wiki](https://github.com/lopes-leandro/koacontacts-api/wiki), eu explico todos os passos para criar um container MongoDB no Docker, se conectar através do Nosql Client ao MongoDB e a criar os usuários necessários para nossa aplicação.
 
 ## Instalação
 Após garantir que os itens do pré-requisito foi concluído, clone o repositório e execute o comando _**npm install**_ para que seja instalada todas as dependências que o projeto necessita.
