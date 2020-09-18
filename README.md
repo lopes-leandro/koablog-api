@@ -25,3 +25,5 @@ O comando abaixo executa o projeto para produção na porta padrão 3000
 ```
 npm start
 ```
+Meus contatos
+<div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="pt_BR" data-type="vertical" data-theme="dark" data-vanity="leandro-lopes-841258171"><a class="LI-simple-link" href='https://br.linkedin.com/in/leandro-lopes-841258171?trk=profile-badge'>Leandro Lopes</a></div>
