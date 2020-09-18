@@ -1,9 +1,12 @@
 ![logo_size](https://user-images.githubusercontent.com/44936493/93589255-f03fd000-f982-11ea-94ca-15329d3895c2.jpg)
 
 # Introdução
+Koa Blog é um blog muito simples, criado para aprendizado do framework KoaJS.
+O framework Koa foi criado e é mantido pela equipe do ExpressJS no intuito de ser mais performático e leve, já que seu núcleo não possui agrupamento de middleware.
+Para saber mais sobre o KoaJS, visite o site https://koajs.com/
 
-Este projeto
-**Monte seu MongoDb em um container do Docker**
+## Instalação
+
 ```
 docker run -d -p 27017:27017 --name koa-blog -e Auth=no mongo
 ```
