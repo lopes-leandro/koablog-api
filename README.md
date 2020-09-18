@@ -1,10 +1,8 @@
-# koablog-api
-Boilerplate API in KoaJS
+![logo_size](https://user-images.githubusercontent.com/44936493/93589255-f03fd000-f982-11ea-94ca-15329d3895c2.jpg)
 
-![GitHub repo size](https://img.shields.io/github/repo-size/lopes-leandro/koacontacts-api)
-![GitHub All Releases](https://img.shields.io/github/downloads/lopes-leandro/koacontacts-api/total)
-![GitHub language count](https://img.shields.io/github/languages/count/lopes-leandro/koacontacts-api)
+# Introdução
 
+Este projeto
 **Monte seu MongoDb em um container do Docker**
 ```
 docker run -d -p 27017:27017 --name koa-blog -e Auth=no mongo
@@ -25,5 +23,8 @@ O comando abaixo executa o projeto para produção na porta padrão 3000
 ```
 npm start
 ```
-Meus contatos
-<div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="pt_BR" data-type="vertical" data-theme="dark" data-vanity="leandro-lopes-841258171"><a class="LI-simple-link" href='https://br.linkedin.com/in/leandro-lopes-841258171?trk=profile-badge'>Leandro Lopes</a></div>
+
+![GitHub repo size](https://img.shields.io/github/repo-size/lopes-leandro/koacontacts-api)
+![GitHub All Releases](https://img.shields.io/github/downloads/lopes-leandro/koacontacts-api/total)
+![GitHub language count](https://img.shields.io/github/languages/count/lopes-leandro/koacontacts-api)
+
