@@ -1,8 +1,9 @@
 # koablog-api
 Boilerplate API in KoaJS
 
-![GitHub repo size](https://img.shields.io/github/repo-size/lopes-leandro/koacontacts-api?style=for-the-badge)
-![GitHub All Releases](https://img.shields.io/github/downloads/lopes-leandro/koacontacts-api/total?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/lopes-leandro/koacontacts-api)
+![GitHub All Releases](https://img.shields.io/github/downloads/lopes-leandro/koacontacts-api/total)
+![GitHub language count](https://img.shields.io/github/languages/count/lopes-leandro/koacontacts-api)
 
 **Monte seu MongoDb em um container do Docker**
 ```
